@@ -1,0 +1,352 @@
+
+<link rel="stylesheet" href="styles.css">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;400;600;900&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./Template_02.css">
+  <title>Your template</title>
+</head>
+
+<body>
+
+
+  <header class="hero container-fluid">
+    <div class="hero__content container mx-auto">
+      <div class="fixed-nav-container">
+        <nav class="hero-nav position-relative container mx-auto px-0">
+          <ul class="nav w-100 list-unstyled align-items-center p-0"><!-- logo here | -->
+            <li class="hero-nav__item"><a href="/"><img class="hero-nav__logo" src="img/vscars.jpg" change-src-onscroll="https://svgshare.com/i/RmR.svg" alt="our logo"></a><span class="mx-2"></span></li>
+            <li javascript-language-selector="" class="hero-nav__item hero-nav__item--with-dropdown hero-nav__item--dropdown-right hero-nav__item--lg-dropdown-left mx-3 mx-lg-2 flex-grow-1 flex-lg-grow-0 d-flex justify-content-end"><span class="hero-nav__link" tabindex="1" role="button"><span class="mr-2"><img class="language-image" width="22px" src="img/rus.jpeg"></span><svg class="hero-nav__item-chevron bi bi-chevron-down" width=".8em" height=".8em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path>
+                </svg></span>
+              <div class="hero-nav__dropdown dropdown dropdown--of-1-columns dropdown--language-selector dropdown--important p-3">
+                <div class="row flex-wrap">
+                  <div class="col-lg-12">
+                    <div class="dropdown__link dropdown__link--selected align-items-center">
+                      <div><img width="24px" src="img/rus.jpeg"></div><span class="mx-2"></span>
+                      <div class="dropdown__item"><span class="dropdown__item-title">Russian (Rus)</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li id="hero-menu" class="flex-grow-1 hero__nav-list hero__nav-list--mobile-menu ft-menu">
+              <ul class="hero__menu-content nav flex-column flex-lg-row ft-menu__slider animated list-unstyled p-2 p-lg-0">
+                <li class="flex-grow-1">
+                  <ul class="nav nav--lg-side flex-column-reverse flex-lg-row-reverse list-unstyled align-items-center p-0">
+                    <li class="flex-grow-1">
+                      <ul class="nav nav--lg-side flex-column-reverse flex-lg-row-reverse list-unstyled align-items-center p-0">
+                        <li class="hero-nav__item"><a href="" target="_blank" class="btn btn-primary">Записаться</a></li>
+                        
+                        <!-- РЕГИСТРЦИЯ -->
+                        <button id="openModal">Регистрация</button>
+
+                        <!-- Модальное окно -->
+                        <div class="modal" id="modal">
+                          <div class="modal-content">
+                            <h2>Регистрация</h2>
+                            <input type="text" placeholder="Имя пользователя">
+                            <input type="email" placeholder="Email">
+                            <input type="password" placeholder="Пароль">
+                            <button class="close" id="closeModal">Отправить</button>
+                          </div>
+                        </div>
+                      
+                        <script>
+                          // Получаем элементы
+                          const openModalBtn = document.getElementById('openModal');
+                          const closeModalBtn = document.getElementById('closeModal');
+                          const modal = document.getElementById('modal');
+                      
+                          // Открытие модального окна
+                          openModalBtn.addEventListener('click', () => {
+                            modal.style.display = 'flex';
+                          });
+                      
+                          // Закрытие модального окна
+                          closeModalBtn.addEventListener('click', () => {
+                            modal.style.display = 'none';
+                          });
+                      
+                          // Закрытие окна при клике вне его
+                          window.addEventListener('click', (e) => {
+                            if (e.target === modal) {
+                              modal.style.display = 'none';
+                            }
+                          });
+                        </script>
+
+
+
+                      </ul>
+                    </li>
+                    <li class="hero-nav__item"><a href="#!" class="hero-nav__link">О нас</a></li>
+                    <li class="hero-nav__item"><a href="#!" class="hero-nav__link">Продукты</a></li>
+                    <li class="hero-nav__item"><a href="#!" class="hero-nav__link">Сервисы</a></li>
+                  </ul>
+                </li>
+              </ul><button close-nav-menu="" class="ft-menu__close-btn animated"><svg class="bi bi-x" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M11.854 4.146a.5.5 0 010 .708l-7 7a.5.5 0 01-.708-.708l7-7a.5.5 0 01.708 0z" clip-rule="evenodd"></path>
+                  <path fill-rule="evenodd" d="M4.146 4.146a.5.5 0 000 .708l7 7a.5.5 0 00.708-.708l-7-7a.5.5 0 00-.708 0z" clip-rule="evenodd"></path>
+                </svg></button>
+            </li>
+            <li class="hero-nav__item d-lg-none d-flex flex-row-reverse"><button open-nav-menu="" class="text-center px-2"><i class="fas fa-bars"></i></button></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="hero__body">
+        <div class="row px-0 mx-0">
+          <div class="col-lg-6 px-0 mx-0">
+            <h1 class="hero__title mb-4">Оклейка автомобилей в вашем городе. Имя, которому вы можете доверять</h1>
+            <p class="hero__paragraph mb-5">Попробуйте без риска. Если вы не удовлетворены на 100%, просто сообщите нам об этом в течение 5 дней и получите свои деньги обратно.</p>
+            <div class="hero__btns-container"><a class="hero__btn btn btn-primary mb-2 mb-lg-0 mx-1 mx-lg-2" href="#!">Присоединиться</a></div>
+          </div>
+          <div class="col-lg-6 mt-5 mt-lg-0">
+            <div class="hero__img-container"><img class="hero__img w-100" src="img/workmain.png"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <script src="https://unpkg.com/tua-body-scroll-lock"></script>
+  <script>
+    var showDropdown = function(e) {
+        e.currentTarget.classList.add("hero-nav__item--show-dropdown")
+      },
+      hideDropdown = function(e) {
+        e.currentTarget.classList.remove("hero-nav__item--show-dropdown")
+      },
+      toggleDropdown = function(e) {
+        e.currentTarget.classList.toggle("hero-nav__item--show-dropdown")
+      };
+
+    function setupDropdowns(n) {
+      document.querySelectorAll(".hero-nav__item--with-dropdown").forEach(function(e) {
+        var o, t;
+        n.matches ? ((o = e.classList).contains("hero-nav__item--dropdown-left") && o.contains("hero-nav__item--dropdown-right") || (t = e.getBoundingClientRect().width, e.querySelector(".dropdown").style.transform = "translateX(calc(-50% + " + t / 2 + "px))"), e.addEventListener("mouseenter", showDropdown), e.addEventListener("mouseleave", hideDropdown), e.querySelector(".hero-nav__link").removeEventListener("click", toggleDropdown)) : (e.removeEventListener("mouseenter", showDropdown), e.removeEventListener("mouseleave", hideDropdown), e.querySelector(".dropdown").style.transform = "", e.addEventListener("click", toggleDropdown))
+      })
+    }
+    var mediaQuery = window.matchMedia("(min-width: 992px)");
+    setupDropdowns(mediaQuery), mediaQuery.addListener(function(e) {
+      var o;
+      setupDropdowns(e), e.matches && ((o = document.querySelector("#hero-menu")).style.height = "", bodyScrollLock.unlock(o))
+    });
+    var heroMenu = document.querySelector("#hero-menu");
+
+    function closeMenuAndGoTo(o) {
+      document.querySelector("#hero-menu").classList.toggle("ft-menu--js-show");
+      var e = document.querySelector("#hero-menu");
+      if (e.style.height = "", bodyScrollLock.unlock(e), "#" === o || !document.querySelector(o)) return !1;
+      setTimeout(function() {
+        var e = document.querySelector(o);
+        window.scrollTo({
+          top: e.getBoundingClientRect().top,
+          behavior: "smooth"
+        })
+      }, 250)
+    }
+    document.querySelector("[close-nav-menu]").onclick = function(e) {
+      heroMenu.classList.toggle("ft-menu--js-show"), bodyScrollLock.unlock(heroMenu)
+    }, document.querySelector("[open-nav-menu]").onclick = function(e) {
+      heroMenu.classList.toggle("ft-menu--js-show"), heroMenu.style.height = window.innerHeight + "px", bodyScrollLock.lock(heroMenu)
+    }, document.querySelector("#hero-menu").querySelectorAll("[href*='#']").forEach(function(o) {
+      o.onclick = function(e) {
+        e.preventDefault(), closeMenuAndGoTo(o.getAttribute("href"))
+      }
+    });
+    var nav = document.querySelector(".hero-nav");
+    window.onscroll = function(e) {
+      var o = document.querySelector("[change-src-onscroll]");
+      window.scrollY > nav.getBoundingClientRect().height ? (nav.classList.contains("hero-nav--is-sticky") || (window.logoSrc = o.getAttribute("src"), o.setAttribute("src", o.getAttribute("change-src-onscroll")), o.setAttribute("change-src-onscroll", logoSrc)), nav.classList.add("hero-nav--is-sticky")) : 0 === window.scrollY && (nav.classList.contains("hero-nav--is-sticky") && (window.logoSrc = o.getAttribute("src"), o.setAttribute("src", o.getAttribute("change-src-onscroll")), o.setAttribute("change-src-onscroll", logoSrc)), nav.classList.remove("hero-nav--is-sticky"))
+    };
+    var languageDropdown = document.querySelector("[javascript-language-selector]");
+    languageDropdown.onclick = function(e) {
+      e.target.classList.contains("dropdown__link") && (languageDropdown.querySelector(".dropdown__link--selected").classList.remove("dropdown__link--selected"), e.target.classList.add("dropdown__link--selected"), document.querySelector(".language-image").setAttribute("src", e.target.querySelector("img").getAttribute("src")))
+    }
+  </script>
+
+  <!-- 1 ---------------->
+
+  <div class="block-8-scr space-between-blocks" style="background: #e1e3e5">
+    <div class="container position-relative">
+      <div class="row px-2 align-items-center flex-column-reverse flex-lg-row">
+
+        <div class="col-lg-6 position-relative mt-4 mt-lg-0">
+          <h1 class="block__title mb-3">Наши полномочия</h1>
+          <p class="block__paragraph block__paragraph--big mb-5">Мы используем только проверенные материалы.</p>
+        </div>
+        <div class="col-lg-6 my-5 my-lg-0 p-lg-5 text-center">
+          <div class="block-8-scr__img-container position-relative"><img class="block-8-scr__img" src="img/work1.png"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2 ---------------->
+
+  <div class="block-8-scr space-between-blocks">
+    <div class="container position-relative">
+      <div class="row px-2 align-items-center flex-column-reverse flex-lg-row">
+        <!-- IMAGE -->
+        <div class="col-lg-6 my-5 my-lg-0 p-lg-5 text-center">
+          <div class="block-8-scr__img-container position-relative"><img class="block-8-scr__img" src="img/work2.png"></div>
+        </div><!-- CONTENT -->
+        <div class="col-lg-6 position-relative mt-4 mt-lg-0">
+          <h1 class="block__title mb-3">Быстрая скорость работы</h1>
+          <p class="block__paragraph block__paragraph--big mb-0">Непередаваемы ощущения, после просмотра результата. Эмоции на всю жизнь.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3 ---------------->
+
+  <div class="block-8-scr space-between-blocks" style="background: #edecef">
+    <div class="container position-relative">
+      <div class="row px-2 align-items-center flex-column-reverse flex-lg-row">
+
+        <div class="col-lg-6 position-relative mt-4 mt-lg-0">
+          <h1 class="block__title mb-3">Ваше удовлетворение - наша работа</h1>
+          <p class="block__paragraph block__paragraph--big mb-5">Мы не делаем ничего необычного. Просто лучшие в стране и все.</p>
+        </div>
+        <div class="col-lg-6 my-5 my-lg-0 p-lg-5 text-center">
+          <div class="block-8-scr__img-container position-relative"><img class="block-8-scr__img" src="img/work3.png"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- отзывы ---------------->
+
+  <div class="block-61 space-between-blocks">
+    <div class="container">
+      <div class="block__header col-lg-8 col-xl-7 mx-auto text-center px-0">
+        <h1 class="block__title">О нас говорят. Нас обсуждают</h1>
+      </div>
+      <div class="row px-2 pt-4">
+        <div class="col-lg-6 pb-5">
+          <div class="testimonial-card-1">
+            <p class="testimonial-card-1__paragraph">Отличное место, постоянно пользуюсь их услугами для защиты своих машин во время поездок за границу по работе и по разумной цене.</p>
+            <div class="block-61-person">
+              <div><img class="block-61-person__avatar" src="img/icon1.png"></div>
+              <div class="px-2"></div>
+              <div class="flex-grow-1 d-flex flex-column"><span class="block-61-person__rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span><span class="block-61-person__name my-1">А. Бакавели</span><span class="block-61-person__info">another.com</span></div>
+            </div><span class="testimonial-card-1__quote-symbol"><i class="fas fa-quote-left"></i></span>
+          </div>
+        </div>
+        <div class="col-lg-6 pb-5">
+          <div class="testimonial-card-1">
+            <p class="testimonial-card-1__paragraph">Я уже давно пользуюсь услугами этих ребят, и знаете, они творят чудеса.</p>
+            <div class="block-61-person">
+              <div><img class="block-61-person__avatar" src="img/icon2.png"></div>
+              <div class="px-2"></div>
+              <div class="flex-grow-1 d-flex flex-column"><span class="block-61-person__rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span><span class="block-61-person__name my-1">В. Виковски</span><span class="block-61-person__info">another.com</span></div>
+            </div><span class="testimonial-card-1__quote-symbol"><i class="fas fa-quote-left"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- question ---------------->
+
+  <div class="block-39 space-between-blocks">
+    <div class="container">
+
+      <div class="block__header col-lg-8 col-xl-7 mx-auto text-center mb-5">
+        <h1 class="block__title">Часто задаваемые вопросы</h1>
+      </div>
+      <div class="row px-2">
+        <div class="col-lg-6">
+          <div class="content-block">
+            <h4 class="content-block__title">Обертывание с полным синтаксическим анализом?</h4>
+            <p class="content-block__paragraph">Команда дизайнеров - профессионалы в области оклейки, а это значит, что мы учитываем каждую мелочь автомобиля. Мы обертываем дверные косяки и все внешние элементы, чтобы ваш автомобиль выглядел совершенно новым.</p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="content-block">
+            <h4 class="content-block__title">Чистый гараж и в удобном ли месте?</h4>
+            <p class="content-block__paragraph">Поддержание чистоты и уюта в гараже является одним из наших ключевых приоритетов, чтобы ничто не мешало качественным упаковочным работам. Вы можете найти нас в удобном месте с легким доступом по нашему адресу.</p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="content-block">
+            <h4 class="content-block__title">В вашей команде профессионалы?</h4>
+            <p class="content-block__paragraph">У нас работают только профессионалы с большим опытом в оклейке автомобилей пленкой. Наши мастера прошли специализированное обучение, регулярно совершенствуют свои навыки и используют только качественные материалы и современные технологии. Мы гарантируем аккуратность, надежность и безупречный результат!</p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="content-block">
+            <h4 class="content-block__title">Предоставляете ли вы гарантию?</h4>
+            <p class="content-block__paragraph">Мы предоставляем гарантию на все работы по оклейке автомобиля пленкой. Срок гарантии зависит от типа пленки и условий эксплуатации, но в среднем составляет от 1 до 5 лет. Гарантия покрывает возможные дефекты оклейки, такие как отклеивание или пузыри. Мы всегда готовы проконсультировать вас и оперативно решить любые вопросы!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- lower  ---------------->
+
+  <div class="block-32 space-between-blocks">
+    <div class="container">
+      <div class="col-lg-8 col-xl-7 mx-auto text-center mb-4">
+        <h1 class="block__title">Оклейка машины это уже не понты, а необходимость. Можете позвонить нам уже сегодня.</h1>
+      </div>
+      <div class="text-center mt-1"><a href="#!" class="btn btn-primary">Получить бесплатную консультацию</a></div>
+    </div>
+  </div>
+  <script>
+    function submitForm(t) {
+      t.preventDefault();
+      var n = t.target.querySelector("button");
+      if (n.classList.contains("btn--loading")) return !1;
+      n.classList.add("btn--loading");
+      try {
+        setTimeout(function() {
+          n.classList.remove("btn--loading")
+        }, 2e3)
+      } catch (t) {
+        console.log(t), n.classList.remove("btn--loading")
+      }
+    }
+  </script>
+
+  <!-- Footer ---------------->
+
+  <div class="block-44 py-5">
+    <div class="container">
+      <div class="row px-0 mx-0 justify-content-center align-items-center">
+        <div class="block-44__logo-container"><img class="block-44__logo" src="img/vscars.jpg"></div>
+        <ul class="block-44__list list-unstyled justify-content-center mb-0">
+          <li class="block-44__li-1"><a href="#!" class="block-44__link">Куки</a></li>
+          <li class="block-44__li-1"><a href="#!" class="block-44__link">Документы</a></li>
+          <li class="block-44__li-1"><a href="#!" class="block-44__link">Приватность</a></li>
+          <li class="block-44__li-1"><a href="#!" class="block-44__link">Сервисы</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="block-44__divider">
+    <div class="container">
+      <div class="row flex-column flex-md-row px-2 justify-content-center">
+        <div class="flex-grow-1">
+          <ul class="block-44__extra-links d-flex list-unstyled p-0">
+            <li class="mx-2"><a href="https://x.com/home" class="block-44__link m-0"><i class="fab fa-twitter"></i></a></li>
+            <li class="mx-2"><a href="https://www.instagram.com/" class="block-44__link m-0"><i class="fab fa-instagram"></i></a></li>
+            <li class="mx-2"><a href="https://mail.google.com/" class="block-44__link m-0"><i class="fas fa-envelope"></i></a></li>
+          </ul>
+        </div>
+        <p class="block-44__copyrights">© 2025 Another :3. Все права защищены.</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
